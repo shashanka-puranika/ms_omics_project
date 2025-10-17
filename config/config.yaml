@@ -1,0 +1,41 @@
+# General Settings
+general:
+  random_seed: 42
+
+# Data Paths
+paths:
+  raw_data_dir: data/raw
+  processed_data_dir: data/processed
+  results_dir: results
+  models_dir: results/models
+  figures_dir: results/figures
+
+# Data Download Settings
+download:
+  pride_project_id: PXD001819
+  base_url: "ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2015/10/PXD001819"
+  mzml_files:
+    - "PXD001819/20150223_QE1_UH3_Yeast_Tryptic_Digest_1A_3R.mzML.gz"
+    - "PXD001819/20150223_QE1_UH3_Yeast_Tryptic_Digest_1B_3R.mzML.gz"
+  peptide_id_file: "PXD001819/mqpar.xml" # We will parse the peptides.txt within the zip
+
+# Feature Engineering
+feature_engineering:
+  mz_range: [400.0, 1500.0] # Focus on common peptide range
+  mz_bins: 5000
+  min_peak_height: 0.01 # Relative to max intensity
+  peak_prominence: 0.01
+
+# Model Hyperparameters
+models:
+  element_predictor:
+    n_estimators: 100
+    max_depth: 20
+    random_state: 42
+    test_size: 0.2
+  molecule_predictor:
+    test_size: 0.2
+    epochs: 50
+    batch_size: 32
+    learning_rate: 0.001
+    dropout_rate: 0.3

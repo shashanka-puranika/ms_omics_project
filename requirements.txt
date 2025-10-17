@@ -1,13 +1,24 @@
-numpy>=1.21.0
-pandas>=1.3.0
-matplotlib>=3.4.0
-seaborn>=0.11.0
-scikit-learn>=1.0.0
-pyopenms>=2.6.0
-pyteomics>=4.5.0
-tensorflow>=2.8.0
-torch>=1.11.0
-jupyter>=1.0.0
-pyyaml>=6.0
-tqdm>=4.62.0
-scipy>=1.7.0
+
+---
+
+#### **`requirements.txt`**
+
+---
+
+#### **`setup.py`**
+
+```python
+from setuptools import setup, find_packages
+
+setup(
+    name='mass_spec_ml_prediction',
+    version='0.1.0',
+    author='Your Name',
+    description='A reproducible ML project for predicting elements and molecules from mass spec data.',
+    packages=find_packages(),
+    python_requires='>=3.9',
+    install_requires=[
+        'numpy', 'pandas', 'scikit-learn', 'tensorflow',
+        'pyopenms', 'pyteomics', 'tqdm', 'pyyaml', 'matplotlib'
+    ],
+)
