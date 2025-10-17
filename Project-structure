@@ -1,0 +1,43 @@
+mass_spec_ml_prediction/
+├── README.md
+├── requirements.txt
+├── setup.py
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── external/
+├── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_feature_extraction.ipynb
+│   └── 03_model_development.ipynb
+├── src/
+│   ├── __init__.py
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── preprocessing.py
+│   │   └── loading.py
+│   ├── features/
+│   │   ├── __init__.py
+│   │   ├── peak_detection.py
+│   │   └── feature_engineering.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── element_predictor.py
+│   │   └── molecule_predictor.py
+│   ├── visualization/
+│   │   ├── __init__.py
+│   │   └── plots.py
+│   └── utils/
+│       ├── __init__.py
+│       └── helpers.py
+├── tests/
+│   ├── test_data_processing.py
+│   ├── test_features.py
+│   └── test_models.py
+├── results/
+│   ├── models/
+│   ├── figures/
+│   └── reports/
+└── config/
+    ├── config.yaml
+    └── logging_config.yaml

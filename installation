@@ -1,0 +1,10 @@
+# Clone the repository
+git clone https://github.com/yourusername/mass_spec_ml_prediction.git
+cd mass_spec_ml_prediction
+
+# Create a conda environment
+conda create -n mass_spec_ml python=3.9
+conda activate mass_spec_ml
+
+# Install dependencies
+pip install -r requirements.txt
